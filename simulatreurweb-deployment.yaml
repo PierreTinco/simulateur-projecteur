@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulateurweb
+  labels:
+    app: simulateur
+spec:
+  selector:
+    matchLabels:
+      app: simulateur
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: simulateur
+        tier: web
+    spec:
+      containers:
+      - name: simulateur-web
+        image: europe-west1-docker.pkg.dev/airy-cogency-396419/simu-repo/simulateur:v1
+        ports:
+        - containerPort: 3001
+        resources:
+          requests:
+            cpu: 200m
+---
