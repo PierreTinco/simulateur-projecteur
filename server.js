@@ -11,7 +11,9 @@ wss.on('connection', (ws) => {
   });
 
   setInterval(() => {
-    ws.send("SIMULATION STATUS PROJECTEUR 1");
+    const statuses = ["Activité", "Veille", "Visionnage", "Erreur"];
+    const randomIndex = Math.floor(Math.random() * statuses.length);
+    ws.send(statuses[randomIndex]);
   }, 10000);
 });
 
