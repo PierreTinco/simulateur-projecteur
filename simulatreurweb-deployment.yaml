@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: simulateur-web
-        image: europe-west1-docker.pkg.dev/airy-cogency-396419/simu-repo/simulateur:v1
+        image: europe-west1-docker.pkg.dev/airy-cogency-396419/simu-repo/simulateur:v2
         ports:
         - containerPort: 3001
         resources:
