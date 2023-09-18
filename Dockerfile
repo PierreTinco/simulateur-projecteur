@@ -1,9 +1,9 @@
-# Use the official lightweight Node.js 16 image.
+# Use the official lightweight Node.js 17 image.
 # https://hub.docker.com/_/node
 FROM node:17-slim
 
 # Create and change to the app directory.
-WORKDIR .
+WORKDIR /app
 
 # Copy application dependency manifests to the container image.
 # A wildcard is used to ensure both package.json AND package-lock.json are copied.
