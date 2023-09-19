@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const port = 3001
+const port = process.env.SIMULATOR_PORT || 3001;
 
 const wss = new WebSocket.Server({ port: port });
 
