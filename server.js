@@ -5,11 +5,7 @@ const wss = new WebSocket.Server({ port: port });
 
 wss.on('connection', (ws) => {
   console.log(`Server is connected on port ${port}`);
-
-  ws.on('message', (message) => {
-    console.log(`Received: ${message}`);
-  });
-
+  
   setInterval(() => {
     const statuses = ["Activité", "Veille", "Visionnage", "Erreur"];
     const randomIndex = Math.floor(Math.random() * statuses.length);
