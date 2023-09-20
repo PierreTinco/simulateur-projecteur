@@ -23,6 +23,7 @@ metadata:
   annotations:
     cloud.google.com/load-balancer-type: "External"
     service.beta.kubernetes.io/google-load-balancer-ssl-certificates: "my-ssl-cert"
+    service.beta.kubernetes.io/gce-affinity-type: client_ip
 spec:
   type: LoadBalancer
   ports:
