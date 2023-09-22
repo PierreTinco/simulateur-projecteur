@@ -71,8 +71,6 @@ firebase/database
 
 firebase/functions
 
-functions
-
 idb
 ISC
 ISC License (ISC)
