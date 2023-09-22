@@ -11,6 +11,15 @@ wss.on('connection', (ws) => {
     const randomIndex = Math.floor(Math.random() * statuses.length);
     ws.send(statuses[randomIndex]);
   }, 10000);
+
+  ws.onmessage = (mess) => {
+    console.log('message reçu :', mess)
+    if(mess.data === 'stop') {
+      ws.close();
+      console.log('connexion shutted down')
+    }
+  }
 });
+
 
 console.log(`Server started on port ${port}`);
